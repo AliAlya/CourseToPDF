@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Narrative Conventions - Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style id="ref6-table">
+        :root {
+            --element1-color: #ffcc99;
+            --element2-color: #ffccff;
+            --element3-color: #ccffcc;
+            --element6-color: #ffcc99;
+            --element5-color: #ffccff;
+        }
+
+        body.ref6 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .content.ref6 {
+            padding: 20px;
+        }
+        .content.ref6 h2.ref6 {
+            font-size: 26px;
+            color: #000;
+        }
+        .content.ref6 p.ref6 {
+            font-size: 16px;
+            color: #000;
+        }
+        .table-container.ref6 {
+            margin-top: 20px;
+            width: 80%; /* Adjust the width of the table */
+            margin: 20px auto; /* Center the table */
+        }
+        .table-container.ref6 table.ref6 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container.ref6 th.ref6, .table-container.ref6 td.ref6 {
+            border: 1px solid #ddd; /* Add a light border for clarity */
+            padding: 12px 15px; /* Add padding for readability */
+            text-align: center; /* Center text in the cells */
+            font-size: 18px;
+        }
+        .table-container.ref6 th.ref6 {
+            width: 30%;
+            font-weight: bold;
+            color: #fff;
+        }
+        .table-container.ref6 td.ref6 {
+            width: 70%;
+        }
+
+        /* Set the background color using CSS variables */
+        .element1-row.ref6 th.ref6 { background-color: var(--element1-color); }
+        .element1-row.ref6 td.ref6 { background-color: rgba(255, 206, 128, 0.6); }
+
+        .element2-row.ref6 th.ref6 { background-color: var(--element2-color); }
+        .element2-row.ref6 td.ref6 { background-color: rgba(255, 206, 255, 0.6); }
+
+        .element3-row.ref6 th.ref6 { background-color: var(--element3-color); }
+        .element3-row.ref6 td.ref6 { background-color: rgba(206, 255, 206, 0.6); }
+
+        .element6-row.ref6 th.ref6 { background-color: var(--element6-color); }
+        .element6-row.ref6 td.ref6 { background-color: rgba(255, 206, 153, 0.6); }
+
+        .element5-row.ref6 th.ref6 { background-color: var(--element5-color); }
+        .element5-row.ref6 td.ref6 { background-color: rgba(255, 206, 255, 0.6); }
+
+        /* Alternate row background color for better readability */
+        .table-container.ref6 tr:nth-child(even) td.ref6 {
+            background-color: #f2f2f2;
+        }
+        .table-container.ref6 tr:hover td.ref6 {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body class="ref6">
+    <div class="content ref6">
+        <div class="table-container ref6">
+            <table class="ref6">
+                <tr class="element1-row ref6">
+                    <th class="ref6">text goes here</th>
+                    <td class="ref6">text goes here text goes here </td>
+                </tr>
+                <tr class="element2-row ref6">
+                    <th class="ref6">text goes here</th>
+                    <td class="ref6">text goes here text goes here </td>
+                </tr>
+                <tr class="element3-row ref6">
+                    <th class="ref6">text goes here</th>
+                    <td class="ref6">text goes here text goes here </td>
+                </tr>
+                <tr class="element6-row ref6">
+                    <th class="ref6">text goes here</th>
+                    <td class="ref6">text goes here text goes here </td>
+                </tr>
+                <tr class="element5-row ref6">
+                    <th class="ref6">text goes here</th>
+                    <td class="ref6">text goes here text goes here </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+import pdfkit
+import os
+
+def html_to_pdf(html_path):
+    # Define the paths
+    output_pdf_path = './test.pdf'
+    
+    # Define the path to wkhtmltopdf.exe
+    path_to_wkhtmltopdf = r'./wkhtmltopdf/bin/wkhtmltopdf.exe' 
+    
+    # Configure pdfkit to use the installed wkhtmltopdf
+    config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
+
+    # Define the options to set margins to zero and include the CSS for avoiding page breaks
+    options = {
+        'margin-top': '0',
+        'margin-right': '0',
+        'margin-bottom': '0',
+        'margin-left': '0',
+        'page-size': 'A4',
+        'enable-local-file-access': None,
+        'quiet': '',  # Verbose output for debugging
+        'load-error-handling': 'ignore',  # Ignore missing resource errors
+        'user-style-sheet': 'path_to_custom_css.css',  # Optional: point to an external CSS file
+    }
+    
+    # Convert the HTML to a PDF
+    pdfkit.from_file(html_path, output_pdf_path, options=options, configuration=config)
+
+    print("PDF generated and saved to", output_pdf_path)
+
+html_to_pdf("./testerOutput.html")
