@@ -1,0 +1,7 @@
+pandas
+redmail
+scrapetube
+pyytdata
+PyMuPDF
+pdfkit
+openai

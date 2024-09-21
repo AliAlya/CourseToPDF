@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML</title>
+    <style id="ref1">
+        @font-face {
+            font-family: 'Optima';
+            src: local('Optima'), local('Optima-Regular');
+        }
+
+        body {
+            background-color: #e6f7ff;
+            font-family: 'Optima', 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .title-box {
+            background-color: #C4C8F3;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .title-box h1 {
+            color: #fff;
+            font-family: 'Optima', 'Arial', sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .subheading-box {
+            background-color: #DDDFF5;
+            padding: 15px;
+            margin-top: 1.5em;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .subheading-box h2 {
+            color: #336699;
+            font-family: 'Optima', 'Arial', sans-serif;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+        p, ul, ol, li {
+            font-family: 'Optima', 'Arial', sans-serif;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul, ol {
+            margin: 0 0 1.5em 1.5em;
+            padding: 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul li, ol li {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        ul li strong, ol li strong {
+            color: #5F6AE8;
+        }
+        .highlight {
+            background-color: #cceeff;
+            border-left: 4px solid #007acc;
+            padding: 10px;
+            margin-bottom: 1.5em;
+        }
+        .content-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .circular-image {
+            float: left;
+            margin: 0 20px 20px 0;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .container, h1, h2, p, .highlight, .footer {
+            page-break-inside: avoid;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .blue-text {
+            color: #007acc;
+        }
+    </style>
+    <style id="ref2">
+        .performance-data {
+            background-color: #ffcc80;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .performance-data h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+        .performance-data p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .data-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .data-item:last-child {
+            margin-bottom: 0;
+        }
+        .data-item .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .data-item .percentage {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .data-item .description {
+            font-size: 14px;
+        }
+        .data-item.green {
+            background-color: #ccffcc;
+        }
+        .data-item.blue {
+            background-color: #ccccff;
+        }
+        .data-item.orange {
+            background-color: #ffcc99;
+        }
+        .data-item.pink {
+            background-color: #ffccff;
+        }
+    </style>
+    <style id="ref3">
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .character { background-color: #f9d5a7; }
+        .point-of-view { background-color: #e6c9f0; }
+        .setting { background-color: #c6e9a7; }
+        .theme { background-color: #a7d9f9; }
+        .plot { background-color: #f0c9d9; }
+        .style { background-color: #f9e6a7; }
+    </style>
+    <style id="ref4">
+        .table-container {
+            margin-top: 20px;
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+        .table-container th {
+            width: 30%;
+        }
+        .table-container td {
+            width: 70%;
+        }
+        .character-row th { background-color: #f9d5a7; }
+        .character-row td { background-color: #fce8d1; }
+        .setting-row th { background-color: #c6e9a7; }
+        .setting-row td { background-color: #e0f3d9; }
+        .plot-row th { background-color: #f0c9d9; }
+        .plot-row td { background-color: #f7e1e7; }
+        .point-of-view-row th { background-color: #e6c9f0; }
+        .point-of-view-row td { background-color: #f1e0f7; }
+        .theme-row th { background-color: #a7d9f9; }
+        .theme-row td { background-color: #d1ecfc; }
+    </style>
+    <style id="ref5">
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            background-color: #f8c1c1;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            top: 10px;
+        }
+        .section-content {
+            border: 2px dashed #000000;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: -10px;
+        }
+        .section-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .section-content ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <style id="ref6">
+        .step.ref5 {
+            margin-bottom: 20px;
+        }
+        .step-title.ref5 {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .step-title.ref5 .arrow.ref5 {
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-right: 10px;
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .step-title.ref5 .arrow.ref5::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid;
+        }
+        .step-content.ref5 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .equation.ref5 {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .highlight.ref5 {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <h1>Artificial Intelligence</h1>
+        </div>
+        <div class="subheading-box">
+            <h2>Overview</h2>
+        </div>
+
+        <p><span class="bold underline">Artificial Intelligence (AI)</span> refers to the simulation of human intelligence processes by machines. These processes include learning, reasoning, and self-correction. The potential of AI is vast, with applications ranging from <span class="blue-text">healthcare</span> and <span class="blue-text">finance</span> to <span class="blue-text">transportation</span> and <span class="blue-text">manufacturing</span>.</p>
+        
+        <div class="clearfix">
+            <img src="https://via.placeholder.com/150" alt="AI Icon" class="circular-image">
+            <p>AI is fundamentally transforming industries by introducing automation and intelligence into systems and processes that were traditionally operated by humans. This transformation is driven by advances in computing power, availability of large datasets, and innovations in algorithms.</p>
+            <p>The journey of AI began with simple automation of repetitive tasks and has now evolved into complex systems capable of mimicking human thought processes. The current state of AI includes voice recognition systems, autonomous vehicles, and advanced decision support systems in businesses and healthcare.</p>
+        </div>
+
+        <p>AI can be categorized into three main types:</p>
+        <ol>
+            <li><span class="bold">Artificial Narrow Intelligence (ANI)</span>: Specialized in one area, like playing chess or recommending products based on purchase history. ANI systems are designed to handle specific tasks and are prevalent in today’s applications, such as virtual assistants and facial recognition systems.</li>
+            <li><span class="bold">Artificial General Intelligence (AGI)</span>: Envisions machines that possess generalized human cognitive abilities. AGI is still theoretical, aiming for machines that can perform any intellectual task a human can do. This concept fuels research into creating machines that can learn and adapt autonomously.</li>
+            <li><span class="bold">Artificial Superintelligence (ASI)</span>: Surpasses human intelligence and abilities. ASI is a speculative future where machines could potentially exceed human intelligence across all domains, raising both exciting possibilities and ethical concerns.</li>
+        </ol>
+
+        <div class="performance-data">
+            <h2>Overview of AI</h2>
+            <p>AI refers to the simulation of human intelligence processes by machines, enabling cognitive functions like problem-solving and decision-making.</p>
+        </div>
+        <div class="data-item green">
+            <div class="icon"><i class="fas fa-check-circle"></i></div>
+            <div class="percentage">Types of AI</div>
+            <div class="description">AI includes Machine Learning, Natural Language Processing, and Computer Vision.</div>
+        </div>
+        <div class="data-item blue">
+            <div class="icon"><i class="fas fa-check-circle"></i></div>
+            <div class="percentage">AI Applications</div>
+            <div class="description">AI is used in healthcare, finance, autonomous vehicles, and many other fields.</div>
+        </div>
+        <div class="data-item orange">
+            <div class="icon"><i class="fas fa-check-circle"></i></div>
+            <div class="percentage">AI Advancements</div>
+            <div class="description">Ongoing developments in AI include deep learning and reinforcement learning.</div>
+        </div>
+        <div class="data-item pink">
+            <div class="icon"><i class="fas fa-check-circle"></i></div>
+            <div class="percentage">Ethics in AI</div>
+            <div class="description">Discussions around AI ethics focus on transparency, bias, and accountability.</div>
+        </div>
+
+        <p><span class="bold underline">AI Benefits:</span></p>
+        <ul>
+            <li><span class="bold">Efficiency</span>: Automating routine tasks to save time and resources, allowing humans to focus on more complex tasks.</li>
+            <li><span class="bold">Decision-making</span>: Enhancing data analysis to support better business strategies and outcomes through predictive analytics and insights.</li>
+            <li><span class="bold">Innovation</span>: Driving new product developments and market opportunities, opening avenues for entirely new industries.</li>
+            <li><span class="bold">Personalization</span>: Tailoring services and products to individual preferences and behaviors, enhancing user experience and satisfaction.</li>
+            <li><span class="bold">Scalability</span>: AI systems can be scaled to manage and process massive datasets that would be unfeasible for human handling.</li>
+        </ul>
+        <p>By leveraging AI, companies can optimize their operations, reduce costs, and innovate faster, gaining a competitive edge in their respective fields. The integration of AI is enabling businesses to become more responsive and adaptive to market changes, customer demands, and emerging technologies.</p>
+
+        <img src="https://via.placeholder.com/800x400" alt="AI Landscape" class="content-image">
+
+        <div class="title-box">
+            <h1>NARRATIVE CONVENTIONS</h1>
+        </div>
+        <div class="subheading-box">
+            <h2>Introduction:</h2>
+        </div>
+        <p>Narrative conventions are the tools a writer uses when creating a story. These tools ensure that it can be understood, visualized, and enjoyed by the reader. They include:</p>
+
+        <ul>
+            <li><span class="bold">Characters</span>: Define who is involved in the story. Characters can be protagonists or antagonists, each playing vital roles in driving the narrative forward.</li>
+            <li><span class="bold">Setting</span>: Establishes the time and place. The setting provides context and environment, influencing the mood and actions within the story.</li>
+            <li><span class="bold">Plot</span>: The sequence of events. The plot is the structured framework that outlines the beginning, middle, and end of the story, including key conflicts and resolutions.</li>
+            <li><span class="bold">Theme</span>: The underlying message or main idea. Themes provide deeper meaning and insight, often reflecting on societal issues, human nature, or philosophical questions.</li>
+        </ul>
+
+        <div class="grid-container">
+            <div class="grid-item character"><b>Character</b>Who the story is about</div>
+            <div class="grid-item point-of-view"><b>Point of View</b>Who is telling the story</div>
+            <div class="grid-item setting"><b>Setting</b>Where the story takes place</div>
+            <div class="grid-item theme"><b>Theme</b>The message of the story</div>
+            <div class="grid-item plot"><b>Plot</b>What happens in the story</div>
+            <div class="grid-item style"><b>Style</b>The choice of words in the story</div>
+        </div>
+
+        <p>In writing about narrative texts, varying your language helps prevent repetition and keeps the reader engaged. Synonyms for narrative terms include:</p>
+        <p><span class="bold">Antagonist</span> (a character in conflict with the protagonist), <span class="bold">Message</span> (theme), <span class="bold">Narrative Viewpoint</span> (point of view), <span class="bold">Central Idea</span> (theme), <span class="bold">Narrative Structure</span> (plot), <span class="bold">Series of Events</span> (plot), <span class="bold">Location</span> (setting), <span class="bold">Place</span> (setting), <span class="bold">Storyline</span> (plot), <span class="bold">Narrative Perspective</span> (point of view), <span class="bold">Protagonist</span> (main character), <span class="bold">Time</span> (setting).</p>
+        <div class="table-container">
+            <table>
+                <tr class="character-row">
+                    <th>Character</th>
+                    <td></td>
+                </tr>
+                <tr class="setting-row">
+                    <th>Setting</th>
+                    <td></td>
+                </tr>
+                <tr class="plot-row">
+                    <th>Plot</th>
+                    <td></td>
+                </tr>
+                <tr class="point-of-view-row">
+                    <th>Point of View</th>
+                    <td></td>
+                </tr>
+                <tr class="theme-row">
+                    <th>Theme</th>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Understanding narrative conventions can enhance one's ability to analyze and interpret literature, allowing for a deeper appreciation of storytelling. These conventions act as a guide, shaping how stories are crafted and perceived, making them accessible and engaging for diverse audiences.</p>
+        <p>These conventions provide a framework that guides both the creation and interpretation of narratives, ensuring clarity and engagement for the audience. By recognizing these elements, readers and writers alike can explore the nuances of storytelling and unlock the layers of meaning embedded within a narrative.</p>
+        <div class="title-box">
+            <h1>Borcelle</h1>
+        </div>
+        <div class="subheading-box">
+            <h2>Neural Networks</h2>
+        </div>
+
+        <p><span class="bold underline">Neural networks</span> are a subset of machine learning that is inspired by the human brain's neural structure. These networks are composed of layers of nodes, mimicking neurons, that process data. They are particularly effective in recognizing patterns and making predictions based on large datasets.</p>
+        
+        <div class="clearfix">
+            <img src="https://via.placeholder.com/150" alt="Neural Network Icon" class="circular-image">
+            <p>The architecture of neural networks includes layers such as the input layer, hidden layers, and an output layer. Each layer consists of interconnected nodes (or neurons) that transmit data signals, allowing the network to learn from input data and improve accuracy over time.</p>
+            <p>Neural networks excel at identifying complex patterns within data, such as recognizing objects in images or understanding speech. They have become a cornerstone of AI research and applications, enabling advances in fields like computer vision, natural language processing, and robotics.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Neural Networks Overview</div>
+            <div class="section-content">
+                <ul>
+                    <li><span class="bold">Architecture</span>: Composed of interconnected layers of nodes (neurons), including input, hidden, and output layers, that process and transmit data.</li>
+                    <li><span class="bold">Learning</span>: Capable of learning from large datasets, recognizing complex patterns, and improving accuracy over time.</li>
+                    <li><span class="bold">Applications</span>: Widely used in image and speech recognition, natural language processing, robotics, and predictive analytics.</li>
+                    <li><span class="bold">Deep Learning</span>: A subset that focuses on using multi-layered neural networks to learn data representations, driving advances in AI capabilities.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p><span class="bold underline">Deep learning</span> has revolutionized fields such as image and speech recognition, enabling systems to perform tasks with high accuracy. It has applications in autonomous vehicles, healthcare diagnostics, and natural language processing. The capabilities of deep learning models are continuously expanding, with advancements in hardware and algorithmic efficiency driving progress.</p>
+        <p>With neural networks, businesses can derive valuable insights from data, driving innovations and improving decision-making processes. These networks enable predictive analytics, automate complex processes, and uncover trends that can inform strategic initiatives and improve overall efficiency.</p>
+        <p>Key characteristics of neural networks include:</p>
+        <ul>
+            <li><span class="bold">Adaptability</span>: Neural networks can learn and adapt to new data, making them versatile tools in dynamic environments.</li>
+            <li><span class="bold">Scalability</span>: They can be scaled to handle large datasets efficiently, making them suitable for big data applications.</li>
+            <li><span class="bold">Robustness</span>: They are resilient to noisy data and can generalize well, maintaining accuracy across different input conditions.</li>
+        </ul>
+        <p>Neural networks continue to evolve, with research focused on improving their transparency, interpretability, and efficiency. These advancements aim to make neural networks more accessible and effective for real-world applications, further integrating AI into various aspects of daily life.</p>
+
+        <img src="https://via.placeholder.com/800x400" alt="Neural Network Applications" class="content-image">
+
+        <div class="title-box">
+            <h1>AI Ethics</h1>
+        </div>
+        <div class="subheading-box">
+            <h2>Ethical Challenges</h2>
+        </div>
+
+        <p>As AI technologies become more integrated into daily life, ethical considerations are paramount. Issues such as privacy, bias, and accountability must be addressed to ensure responsible AI development and deployment. <span class="bold underline">Ethical AI</span> involves creating systems that are fair, transparent, and accountable.</p>
+        
+        <div class="clearfix">
+            <img src="https://via.placeholder.com/150" alt="Ethics Icon" class="circular-image">
+            <p>Incorporating ethics into AI involves understanding the societal impact of AI systems and designing them to promote fairness and inclusivity. This includes evaluating how AI decisions affect different demographic groups and ensuring that AI does not reinforce existing biases or create new inequities.</p>
+            <p>Key ethical concerns include:</p>
+            <ul>
+                <li><span class="bold">Data Privacy</span>: Ensuring user data is collected and used responsibly, with proper consent and protection against unauthorized access.</li>
+                <li><span class="bold">Algorithmic Bias</span>: Mitigating biases in AI models that could lead to unfair outcomes, particularly for marginalized or underrepresented communities.</li>
+                <li><span class="bold">Accountability</span>: Establishing clear guidelines for AI decision-making processes, ensuring that organizations and individuals are accountable for the actions of AI systems.</li>
+                <li><span class="bold">Transparency</span>: Making AI systems understandable and interpretable, allowing users and stakeholders to understand how decisions are made.</li>
+                <li><span class="bold">Safety and Security</span>: Ensuring AI systems operate safely and securely, preventing malicious use or unintended consequences.</li>
+            </ul>
+        </div>
+
+        <div class="container ref5">
+            <div class="step ref5">
+                <div class="step-title ref5">
+                    <div class="arrow ref5" style="background-color: #d1e7dd; border-color: #d1e7dd;">STEP 1</div>
+                    Consider Data Ethics
+                </div>
+                <div class="step-content ref5">
+                    Ensuring ethical AI begins with understanding the importance of data privacy and protection. Consider how data is collected, stored, and used, and ensure consent is obtained from users.
+                </div>
+                <div class="highlight ref5" style="background-color: #d1e7dd;">User data must be collected responsibly and transparently.</div>
+            </div>
+            <div class="step ref5">
+                <div class="step-title ref5">
+                    <div class="arrow ref5" style="background-color: #cfe2f3; border-color: #cfe2f3;">STEP 2</div>
+                    Address Algorithmic Bias
+                </div>
+                <div class="step-content ref5">
+                    Evaluate AI systems for biases that could lead to unfair treatment or discrimination. Implement processes to identify and mitigate these biases, ensuring AI outcomes are equitable for all users.
+                </div>
+                <div class="highlight ref5" style="background-color: #cfe2f3;">Biases in AI must be identified and addressed proactively.</div>
+            </div>
+            <div class="step ref5">
+                <div class="step-title ref5">
+                    <div class="arrow ref5" style="background-color: #f8d7da; border-color: #f8d7da;">STEP 3</div>
+                    Foster Transparency
+                </div>
+                <div class="step-content ref5">
+                    Develop AI systems with transparency in mind, allowing users to understand how decisions are made. This transparency builds trust and enables users to make informed choices.
+                </div>
+                <div class="highlight ref5" style="background-color: #f8d7da;">Transparency in AI builds trust and accountability.</div>
+            </div>
+            <div class="step ref5">
+                <div class="step-title ref5">
+                    <div class="arrow ref5" style="background-color: #d1e7dd; border-color: #d1e7dd;">STEP 4</div>
+                    Ensure Accountability
+                </div>
+                <div class="step-content ref5">
+                    Create clear guidelines for AI accountability, ensuring organizations and individuals are responsible for AI actions. Establishing accountability measures promotes ethical AI development.
+                </div>
+                <div class="highlight ref5" style="background-color: #d1e7dd;">Accountability measures promote ethical AI practices.</div>
+            </div>
+        </div>
+
+        <p>Ensuring ethical AI practices involves collaboration among technologists, ethicists, policymakers, and the public. By prioritizing ethics in AI development, we can create systems that not only drive technological advancement but also contribute positively to society.</p>
+        <p>The promise of AI to enhance decision-making, improve efficiency, and drive innovation makes it a compelling field with boundless opportunities for growth and transformation. Ethical AI practices are essential to harness this potential responsibly, ensuring that AI serves the greater good.</p>        
+        <div class="footer">
+            <p>&copy; 2024 AI Course. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
