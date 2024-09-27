@@ -8,7 +8,7 @@ from openai import OpenAI
 
 # GPT function as provided
 client = OpenAI(
-    api_key='sk-proj-mCWQQDHRasr5LcSqAqHsT3BlbkFJ4GmldcHKovwMsHwFto5j',
+    api_key='<API KEY HERE>',
 )
 
 def GPT(system_prompt, user_prompt, model="gpt-3.5-turbo"):
